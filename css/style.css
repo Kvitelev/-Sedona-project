@@ -1,0 +1,371 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/PTSans.woff2) format(woff2),
+    url(../fonts/PTSans.woff) format(woff);
+  font-family: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/PTSans-Bold.woff2) format(woff2),
+    url(../fonts/PTSans-Bold.woff) format(woff);
+  font-family: 700;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  /*Text*/
+  --basic-black: #000000;
+  --basic-black-light: #333333;
+  --basic-white: #ffffff;
+  --basic-grey: #666666;
+
+  /*Background*/
+  --basic-blue-light: #81b3d2;
+  --basic-white-grey: #eeeeee;
+  --basic-brown: #766357;
+  --basic-smoky-white: #f2f2f2;
+
+  /*Style Guide*/
+  --basic-blue-hover: #669EC0;
+  --basic-blue-active: #5496bd;
+  --basic-brown-hover: #604E43;
+  --basic-brown-active: #503E33;
+  --basic-grey-hover: #ebebeb;
+  --basic-grey-active: #bdbbbc;
+
+  /*Box Shadow*/
+  --box-shadow-black: rgba(0, 1, 1, 0.2);
+
+  /* Border */
+  --basic-grey-border: #e5e5e5;
+}
+
+/* Global */
+.page-body {
+  width: 1280px;
+  height: 2762px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-smoky-white);
+}
+
+.container {
+  width: 1200px;
+  margin: inherit;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--box-shadow-black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Скрытие заголовков*/
+/* .visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+} */
+
+/* Header */
+.main-header {
+  line-height: 26px;
+}
+
+.nav-section:hover {
+  color: var(--basic-blue-light);
+}
+
+.nav-section:active {
+  opacity: 30%;
+}
+
+/* Main */
+.img {
+  height: 509px;
+  background: var(--basic-blue-light) url("../img/background-photo.jpg") no-repeat;
+}
+
+/*Introduction Text*/
+.introduction-big-text {
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: inherit;
+}
+
+.introduction-normal-text {
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* Features City of Sedona */
+.background-blue {
+  background-color: var(--basic-blue-light);
+  color: var(--basic-white);
+}
+
+.background-grey {
+  background-color: var(--basic-white-grey);
+}
+
+.list-item h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.list-item p {
+  font-weight: 400;
+}
+
+/* Hotel Search */
+.big-text {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.normal-text {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.btn-search {
+  border: none;
+  color: var(--basic-white);
+  background-color: var(--basic-brown);
+  text-transform: inherit;
+}
+
+.btn-search:hover {
+  background-color: var(--basic-brown-hover);
+}
+
+.btn-search:active {
+  background-color: var(--basic-brown-active);
+}
+
+.text-opacity:active {
+  opacity: 30%;
+}
+
+/* Window Hotel Search */
+.user {
+  border: none;
+  background-color: var(--basic-smoky-white);
+  text-transform: inherit;
+}
+
+.user:hover {
+  background-color: var(--basic-grey-hover);
+}
+
+.user:focus {
+  /*как-то надо убрать борт*/
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-grey-border);
+}
+
+.logo-calendar:hover {
+  fill: var(--basic-black);
+}
+
+.logo-calendar:active {
+  fill: var(--basic-blue-light);
+}
+
+.add-reduse:hover {
+  fill: var(--basic-black);
+}
+
+.add-reduse:active {
+  fill: var(--basic-blue-light);
+}
+
+.link-btn-search {
+  color: var(--basic-white);
+  background-color: var(--basic-blue-light);
+}
+
+.link-btn-search:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.link-btn-search:active {
+  background-color: var(--basic-blue-active);
+}
+
+/* Modal Map */
+
+
+/* Main Footer */
+
+.logo-htmlacademy:hover {
+  fill: var(--basic-blue-light);
+}
+
+.logo-htmlacademy:active {
+  fill: var(--basic-grey-active);
+}
+
+
+/* Catalog.html */
+.inner-page {
+  height: 933px;
+}
+
+/* Header */
+.active {
+  color: var(--basic-brown);
+}
+
+/* Main Page Hotels */
+.filters {
+  height: 217px;
+  background: var(--basic-black-light) url("../img/background-catalog.png") no-repeat;
+}
+
+.title {
+  font-size: 16px;
+  color: var(--basic-white);
+}
+
+.options {
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.cost {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
+  border: var(--basic-white);
+  color: var(--basic-white);
+}
+
+.filters-btn {
+  font-weight: 400;
+  text-transform: inherit;
+  border: 2px solid var(--basic-white);
+  color: var(--basic-white);
+  /* opacity: 0%; */
+}
+
+.filters-btn:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.sorting-by-type {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.list-type {
+  opacity: 30%;
+  border-bottom: 1px dotted var(--basic-blue-light);
+}
+
+.selected {
+  color: var(--basic-blue-light);
+  opacity: 100%;
+  border: none;
+}
+
+.list-type:hover {
+  color: var(--basic-blue-light);
+  border-bottom: 1px dotted var(--basic-blue-light);
+}
+
+.list-type:active {
+  color: var(--basic-black);
+  border: none;
+  opacity: 100%;
+}
+
+.icon-dir:hover {
+  fill: var(--basic-black);
+}
+
+.icon-dir:active {
+  fill: var(--basic-blue-light);
+}
+
+.down-active {
+  fill: var(--basic-blue-light);
+}
+
+/* Hotels City Sedona*/
+.hotel-sedona:hover {
+  color: var(--basic-blue-light);
+}
+
+.hotel-sedona:active {
+  color: var(--basic-black);
+  opacity: 30%;
+}
+
+.link-btn-detailed {
+  background-color: var(--basic-blue-light);
+  color: var(--basic-white);
+}
+
+.link-btn-detailed:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.link-btn-detailed:active {
+  background-color: var(--basic-blue-active);
+}
+
+.active-opacity:active {
+  opacity: 30%;
+}
+
+.link-btn-book {
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+}
+
+.link-btn-book:hover {
+  background-color: var(--basic-brown-hover);
+}
+
+.link-btn-book:active {
+  background-color: var(--basic-brown-active);
+}
+
+.price-hotel {
+  font-weight: 400;
+  color: var(--basic-black-light);
+}
+
+.rating {
+  font-weight: 400;
+  background-color: var(--basic-smoky-white);
+  color: var(--basic-grey);
+}
