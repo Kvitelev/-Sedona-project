@@ -45,10 +45,16 @@
 }
 
 /* Global */
-.page-body {
+.page {
   width: 1280px;
-  height: 2762px;
+  height: 100%;
+  background-color: var(--basic-smoky-white);
   margin: 0 auto;
+}
+
+.page-body {
+  width: 1200px;
+  margin: inherit;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -57,14 +63,16 @@
   text-align: center;
   color: var(--basic-black);
   text-transform: uppercase;
-  background-color: var(--basic-smoky-white);
-}
-
-.container {
-  width: 1200px;
-  margin: inherit;
   background-color: var(--basic-white);
   box-shadow: 0px 5px 15px var(--box-shadow-black);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: min-content 1fr min-content;
 }
 
 a {
@@ -77,24 +85,26 @@ img {
   height: auto;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 /*Скрытие заголовков*/
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-} */
+}
 
 /* Header */
 .main-header {
   line-height: 26px;
+  grid-area: header;
+  min-height: 70px;
+}
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-section:hover {
@@ -102,13 +112,38 @@ ul {
 }
 
 .nav-section:active {
+  color: var(--basic-black);
   opacity: 30%;
 }
 
 /* Main */
-.img {
+.main-contents {
+  grid-area: main;
+}
+
+.img-box {
   height: 509px;
   background: var(--basic-blue-light) url("../img/background-photo.jpg") no-repeat;
+}
+
+.img-welcome {
+  position: relative;
+  top: 75px;
+}
+
+.img-to-the {
+  position: relative;
+  top: 65px;
+}
+
+.img-sedona {
+  position: relative;
+  top: 95px;
+}
+
+.img-mask {
+  position: relative;
+  top: 105px
 }
 
 /*Introduction Text*/
@@ -116,14 +151,31 @@ ul {
   font-size: 21px;
   line-height: 26px;
   text-transform: inherit;
+
+}
+
+.margin-top {
+  margin-top: 43px;
+  padding-bottom: 10px;
 }
 
 .introduction-normal-text {
   font-weight: 400;
   line-height: 26px;
+
+}
+
+.margin-bootom {
+  margin-bottom: 51px;
 }
 
 /* Features City of Sedona */
+.features ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .background-blue {
   background-color: var(--basic-blue-light);
   color: var(--basic-white);
@@ -133,13 +185,65 @@ ul {
   background-color: var(--basic-white-grey);
 }
 
-.list-item h3 {
+.features-subtitle {
   font-size: 21px;
   line-height: 21px;
+  grid-area: info-text;
+  padding-top: 20px;
+  min-width: 122px;
 }
 
-.list-item p {
+.features-text {
   font-weight: 400;
+  grid-area: info-text;
+  padding-top: 150px;
+}
+
+.list-item-container {
+  display: grid;
+  grid-template-areas: "info-text img";
+  grid-template-columns: 1fr 2fr;
+}
+
+.number {
+  padding-top: 100px;
+}
+
+.features-img {
+  grid-area: img;
+}
+
+.list-item-box {
+  display: grid;
+  grid-template-areas: "left center right";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon-box {
+  margin-top: 60px;
+}
+
+.secondary-subtitle {
+  padding-top: 20px;
+}
+
+.secondary-text {
+  padding-top: 25px;
+  margin-bottom: 80px;
+}
+
+.secondarys-subtitle {
+  margin-top: 47px;
+  padding-top: 10px;
+}
+
+.secondarys-numbers {
+  padding-top: 10px;
+}
+
+.secondarys-text {
+  margin-bottom: 50px;
+  padding-top: 10px;
 }
 
 /* Hotel Search */
@@ -222,6 +326,22 @@ ul {
 
 
 /* Main Footer */
+.main-footer {
+  grid-area: footer;
+}
+
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li {/*переделать*/
+  display: inline-block;
+  background-color: var(--basic-blue-light);
+  width: 46px;
+  height: 48px;
+}
 
 .logo-htmlacademy:hover {
   fill: var(--basic-blue-light);
@@ -231,10 +351,23 @@ ul {
   fill: var(--basic-grey-active);
 }
 
+.introduction-big-text {
+  padding: 5px;
+}
+
+.footer-copyright {
+  margin-top: 30px;
+}
+
+.main-footer {
+  display: grid;
+  grid-template-areas: "contacts social copyright";
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 /* Catalog.html */
 .inner-page {
-  height: 933px;
+  height: 100%;
 }
 
 /* Header */
