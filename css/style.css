@@ -122,6 +122,7 @@ img {
 }
 
 .img-box {
+  width: inherit;
   height: 509px;
   background: var(--basic-blue-light) url("../img/background-photo.jpg") no-repeat;
 }
@@ -366,9 +367,7 @@ img {
 }
 
 /* Catalog.html */
-.inner-page {
-  height: 100%;
-}
+
 
 /* Header */
 .active {
@@ -376,9 +375,21 @@ img {
 }
 
 /* Main Page Hotels */
+.page-hotels {
+  height: 100%;
+  grid-area: main;
+}
+
 .filters {
+  width: inherit;
   height: 217px;
   background: var(--basic-black-light) url("../img/background-catalog.png") no-repeat;
+}
+
+.filters-conveniences ul, .filters-hotels ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
@@ -452,7 +463,19 @@ img {
   fill: var(--basic-blue-light);
 }
 
+.sorting ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Hotels City Sedona*/
+.hotels-city-sedona ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .hotel-sedona:hover {
   color: var(--basic-blue-light);
 }
