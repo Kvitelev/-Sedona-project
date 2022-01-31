@@ -44,20 +44,20 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр: гостиниц</h2>
-        <form action="https://echo.htmlacademy.ru/" method="get">
+        <form action="https://echo.htmlacademy.ru/" method="get" class="forms-filters-hotels">
 
           <fieldset class="filters-conveniences">
             <legend class="title">Инфраструктура:</legend>
             <ul>
-              <li>
+              <li class="list-options">
                 <input type="checkbox" name="infrastructure" id="swimming-pool" value="swimming pool" checked>
                 <label class="options" for="swimming-pool">Бассейн</label>
               </li>
-              <li>
+              <li class="list-options">
                 <input type="checkbox" name="infrastructure" id="parking" value="parking">
                 <label class="options" for="parking">Парковка</label>
               </li>
-              <li>
+              <li class="list-options">
                 <input type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi">
                 <label class="options" for="wi-fi">Wi-Fi</label>
               </li>
@@ -67,24 +67,23 @@
           <fieldset class="filters-hotels">
             <legend class="title">Тип жилья:</legend>
             <ul>
-              <li>
+              <li class="list-options"><!--Кастомные чекбоксы-->
                 <input type="checkbox" name="type of housing" id="hotel" value="hotel" checked>
                 <label class="options" for="hotel">Гостиница</label>
-                <!--Кастомные чекбоксы-->
               </li>
-              <li>
+              <li class="list-options">
                 <input type="checkbox" name="type of housing" id="motel" value="motel" checked>
                 <label class="options" for="motel">Мотель</label>
               </li>
-              <li>
+              <li class="list-options">
                 <input type="checkbox" name="type of housing" id="apartments" value="apartments" checked>
                 <label class="options" for="apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend class="title">Стоимость в сутки, ₽:</legend>
+          <fieldset class="filters-cost">
+            <legend class="title-cost">Стоимость в сутки, ₽:</legend>
             <label for="cost"><input class="cost" type="text" value="от 0" name="min cost" id="cost"></label>
             <label for="costs"><input class="cost" type="text" value="от 3000" name="max cost" id="costs"></label><br>
             <input type="range" min="0" max="3000">
@@ -96,7 +95,7 @@
 
       <section class="sorting">
         <span class="introduction-big-text">Найдено: 3</span>
-        <span class="sorting-by-type">Сортировка:</span>
+        <span class="sorting-by-type sorting-text">Сортировка:</span>
         <ul class="sorting-by-type">
           <li class="list-type selected">
             <a href="#">По цене</a>
@@ -108,25 +107,27 @@
             <a href="#">По рейтингу</a>
           </li>
         </ul>
-        <a href="#">
-          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" class="icon-dir up"/>
-          </svg>
-        </a>
-        <a href="#">
-          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 10L0 0H11" fill="#CACACA" class="icon-dir down-active"/>
-          </svg>
-        </a>
+        <div class="sorting-link-icons">
+          <a href="#" class="">
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" class="icon-dir up"/>
+            </svg>
+          </a>
+          <a href="#" class="sorting-link-icon">
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="#CACACA" class="icon-dir down-active"/>
+            </svg>
+          </a>
+        </div>
       </section>
 
       <section class="hotels-city-sedona">
         <h2 class="visually-hidden">Список отелей</h2>
         <ul class="list-hotels">
-          <li class="hotel-amara-resort">
-            <a href="blank.html">
-              <span class="introduction-big-text hotel-sedona">Amara Resort & Spa</span>
-              <p>
+          <li class="hotel-amara choosing-hotel">
+            <a href="blank.html" class="link-hotels">
+              <span class="introduction-big-text name-hotel-sedona">Amara Resort & Spa</span>
+              <p class="img-hotels">
                 <img src="img/Amara-Resort.jpg" alt="Курортный спа-отель Amara" width="135" height="90">
               </p>
             </a>
@@ -139,16 +140,18 @@
 
             <span class="rating">Рейтинг: 8,5</span>
 
-            <img src="img/icon/star-icon.svg" alt="Гостиница с четыремя звёздами" width="19" height="17">
-            <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
-            <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
-            <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+            <div class="img-stars">
+              <img src="img/icon/star-icon.svg" alt="Гостиница с четыремя звёздами" width="19" height="17">
+              <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+              <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+              <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+            </div>
           </li>
 
-          <li class="hotel-desert-quail">
-            <a href="blank.html">
-              <span class="introduction-big-text hotel-sedona">Desert Quail Inn</span>
-              <p>
+          <li class="hotel-desert choosing-hotel">
+            <a href="blank.html" class="link-hotels">
+              <span class="introduction-big-text name-hotel-sedona">Desert Quail Inn</span>
+              <p class="img-hotels">
                 <img src="img/Desert-Quail.jpg" alt="Гостиница Пустынный перепел" width="135" height="90">
               </p>
             </a>
@@ -161,15 +164,17 @@
 
             <span class="rating">Рейтинг: 8,9</span>
 
-            <img src="img/icon/star-icon.svg" alt="Гостиница с тремя звёздами" width="19" height="17">
-            <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
-            <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+            <div class="img-stars">
+              <img src="img/icon/star-icon.svg" alt="Гостиница с тремя звёздами" width="19" height="17">
+              <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+              <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+            </div>
           </li>
 
-          <li class="hotel-diablo">
-            <a href="blank.html">
-              <span class="introduction-big-text hotel-sedona">Villas at Poco Diablo</span>
-              <p>
+          <li class="hotel-diablo choosing-hotel">
+            <a href="blank.html" class="link-hotels">
+              <span class="introduction-big-text name-hotel-sedona">Villas at Poco Diablo</span>
+              <p class="img-hotels">
                 <img src="img/Villas-at-Poco-Diablo.jpg" alt="Виллы в Поко Диабло" width="135" height="90">
               </p>
             </a>
@@ -182,8 +187,10 @@
 
             <span class="rating">Рейтинг: 9,2</span>
 
-            <img src="img/icon/star-icon.svg" alt="Гостиница с двумя звёздами" width="19" height="17">
-            <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+            <div class="img-stars">
+              <img  src="img/icon/star-icon.svg" alt="Гостиница с двумя звёздами" width="19" height="17">
+              <img src="img/icon/star-icon.svg" alt="" width="19" height="17">
+            </div>
           </li>
         </ul>
       </section>

@@ -392,9 +392,46 @@ img {
   padding: 0;
 }
 
+.forms-filters-hotels {
+  min-height: 217px;
+  display: grid;
+  grid-template-areas: "filters-conveniences filters-hotels filters-cost";
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.filters-conveniences {
+  border: none;
+  margin-top: 27px;
+  margin-left: 72px;
+}
+
+.list-options {
+  padding-bottom: 25px;
+}
+
+.filters-hotels {
+  border: none;
+  margin-right: 80px;
+  margin-top: 27px;
+}
+
+.filters-cost {
+  border: none;
+  grid-area: filters-cost;
+  margin-top: 27px;
+}
+
 .title {
   font-size: 16px;
   color: var(--basic-white);
+  padding-bottom: 25px;
+}
+
+.title-cost {
+  font-size: 16px;
+  color: var(--basic-white);
+  padding-bottom: 10px;
+  padding-right: 160px;
 }
 
 .options {
@@ -406,32 +443,55 @@ img {
   font-size: inherit;
   line-height: inherit;
   font-weight: 400;
-  border: var(--basic-white);
+  border: 2px solid var(--basic-white);
   color: var(--basic-white);
+  background-color: rgba(var(--basic-black) 0.1);
+  margin-bottom: 20px;
 }
 
 .filters-btn {
+  width: 137px;
+  height: 36px;
   font-weight: 400;
   text-transform: inherit;
   border: 2px solid var(--basic-white);
   color: var(--basic-white);
-  /* opacity: 0%; */
+  grid-area: filters-cost;
+  grid-row: 3 / -1;
+  margin-top: -90px;
+  margin-bottom: 32px;
+  justify-self: center;
+  background-color: rgba(var(--basic-black) 0.1);
 }
 
 .filters-btn:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
+/* Sorting */
+.sorting {
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 73px;
+  border-bottom: 1px solid var(--basic-grey-border);/*Обратьть внимание на декоративную линию*/
+}
+
+.sorting-text {
+  margin-left: 46px;
+  margin-right: 40px;
+}
 
 .sorting-by-type {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  display: inline-flex;
 }
 
 .list-type {
   opacity: 30%;
   border-bottom: 1px dotted var(--basic-blue-light);
+  margin-right: 30px;
 }
 
 .selected {
@@ -449,6 +509,17 @@ img {
   color: var(--basic-black);
   border: none;
   opacity: 100%;
+}
+
+.sorting-link-icons {
+  text-align: right;
+  margin-top: -35px;
+  margin-right: 73px;
+  padding: 12px;
+}
+
+.sorting-link-icon {
+  padding-left: 12px;
 }
 
 .icon-dir:hover {
@@ -470,17 +541,40 @@ img {
 }
 
 /* Hotels City Sedona*/
+.list-hotels {
+  display: grid;
+  grid-template-areas:
+    "hotel-amara"
+    "hotel-desert"
+    "hotel-diablo";
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
 .hotels-city-sedona ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.hotel-sedona:hover {
+.choosing-hotel {/*gid vs flex вот в чем вопрос*/
+  justify-self: left;
+  display: flexbox;
+  border-bottom: 1px solid var(--basic-grey-border);
+}
+
+.img-hotels {
+  display: flex;
+}
+
+.name-hotel-sedona {
+  order: 1;
+}
+
+.name-hotel-sedona:hover {
   color: var(--basic-blue-light);
 }
 
-.hotel-sedona:active {
+.name-hotel-sedona:active {
   color: var(--basic-black);
   opacity: 30%;
 }
