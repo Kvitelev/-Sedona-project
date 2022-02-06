@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   src: url(../fonts/PTSans.woff2) format(woff2),
     url(../fonts/PTSans.woff) format(woff);
-  font-family: 400;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   src: url(../fonts/PTSans-Bold.woff2) format(woff2),
     url(../fonts/PTSans-Bold.woff) format(woff);
-  font-family: 700;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -621,6 +621,7 @@ img {
 .link-hotels {
   display: flex;
   align-self: flex-start;
+  width: 470px;
 }
 
 .img-hotels {
@@ -645,6 +646,11 @@ img {
   background-color: var(--basic-blue-light);
   color: var(--basic-white);
   align-self: flex-end;
+  margin-right: 6px;
+  width: 110px;
+  position: relative;
+  right: 450px;
+  top: -40px;
 }
 
 .link-btn-detailed:hover {
@@ -663,6 +669,10 @@ img {
   background-color: var(--basic-brown);
   color: var(--basic-white);
   align-self: flex-end;
+  width: 142px;
+  position: relative;
+  right: 450px;
+  top: -40px;
 }
 
 .link-btn-book:hover {
@@ -677,7 +687,12 @@ img {
   font-weight: 400;
   color: var(--basic-black-light);
   align-self: center;
-  margin: 9px;
+  margin-right: 9px;
+  width: 100px;
+  text-align: left;
+  position: relative;
+  right: 230px;
+  top: -10px;
 }
 
 .rating {
@@ -685,11 +700,16 @@ img {
   background-color: var(--basic-smoky-white);
   color: var(--basic-grey);
   align-self: flex-end;
+  width: 110px;
+  position: relative;
+  top: -40px;
+  left: 70px;
 }
 
-.img-stars {/*Доделать*/
+.img-stars {
  margin-top: 30px;
  align-items: flex-start;
+ width: 90px;
 }
 
 /* Blank Text */
