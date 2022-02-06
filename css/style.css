@@ -651,6 +651,7 @@ img {
   position: relative;
   right: 450px;
   top: -40px;
+  padding: 5px;
 }
 
 .link-btn-detailed:hover {
@@ -673,6 +674,7 @@ img {
   position: relative;
   right: 450px;
   top: -40px;
+  padding: 5px;
 }
 
 .link-btn-book:hover {
@@ -703,7 +705,8 @@ img {
   width: 110px;
   position: relative;
   top: -40px;
-  left: 70px;
+  left: 80px;
+  padding: 5px;
 }
 
 .img-stars {
