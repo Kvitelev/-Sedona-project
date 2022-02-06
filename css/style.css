@@ -53,7 +53,7 @@
 }
 
 .page-body {
-  width: 1200px;
+  width: 1200px;/*возможно min-width, но тогда изоюрожения сползают*/
   margin: inherit;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -98,13 +98,34 @@ img {
 .main-header {
   line-height: 26px;
   grid-area: header;
-  min-height: 70px;
+  min-height: 56px;
+  margin-bottom: -40px;
 }
 
-.main-navigation ul {
+.main-navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo-sedona {
+  order: 1;
+  position: relative;
+}
+
+.list-navigation {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 140px;
+}
+
+.right-navigation {
+  order: 2;
+}
+
+.nav-section {
+  margin: 15px 0px;
 }
 
 .nav-section:hover {
@@ -127,22 +148,30 @@ img {
   background: var(--basic-blue-light) url("../img/background-photo.jpg") no-repeat;
 }
 
-.img-welcome {
+.img-welcome { /*Обратить внимание*/
+  /* width: 188px;
+  height: 45px; */
   position: relative;
   top: 75px;
 }
 
 .img-to-the {
+  /* width: 256px;
+  height: 29px; */
   position: relative;
   top: 65px;
 }
 
 .img-sedona {
+  /* width: 457px;
+  height: 213px; */
   position: relative;
   top: 95px;
 }
 
 .img-mask {
+  /* width: 1200px;
+  height: 57px; */
   position: relative;
   top: 106px;
 }
@@ -326,44 +355,68 @@ img {
 /* Main Footer */
 .main-footer {
   grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* opacity: 90%; */
+}
+
+.footer-contacts {
+  margin: auto
 }
 
 .text-contact {
-  padding-bottom: 10px;
+  margin-bottom: 9px;
 }
 
-.footer-social ul {
+.social-links {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 36px 0;
+  gap: 6px;
 }
 
-.social-links li {/*переделать*/
-  display: inline-block;
+.item-social-link {
+  display: flex;
   background-color: var(--basic-blue-light);
   width: 46px;
   height: 48px;
 }
 
-.logo-htmlacademy:hover {
+.item-social-link:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.item-social-link:active {
+  background-color: var(--basic-blue-active);
+}
+
+.social {
+  margin: auto;
+}
+
+.footer-copyright {
+  margin: auto;
+}
+
+.logo-htmlacademy {
+  position: relative;
+  top: 10px;
+  margin-left: 15px;
+}
+
+.logo-htmlacademy-effect:hover {
   fill: var(--basic-blue-light);
 }
 
-.logo-htmlacademy:active {
+.logo-htmlacademy-effect:active {
   fill: var(--basic-grey-active);
 }
 
 .introduction-big-text {
   padding: 5px;
-}
-
-.footer-copyright {
-  margin-top: 30px;
-}
-
-.main-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Catalog.html */
@@ -382,8 +435,9 @@ img {
 
 .filters {
   width: inherit;
-  height: 217px;
+  height: 217px; /*min-height*/
   background: var(--basic-black-light) url("../img/background-catalog.png") no-repeat;
+  margin-top: 20px;
 }
 
 .filters-conveniences ul, .filters-hotels ul {
@@ -401,6 +455,8 @@ img {
 .filters-conveniences {
   grid-area: filters-conveniences;
   border: none;
+  margin: 0;
+  padding: 0;
   margin-top: 27px;
   margin-left: 72px;
 }
@@ -412,12 +468,16 @@ img {
 .filters-hotels {
   grid-area: filters-hotels;
   border: none;
+  margin: 0;
+  padding: 0;
   margin-right: 80px;
   margin-top: 27px;
 }
 
 .filters-cost {
   border: none;
+  margin: 0;
+  padding: 0;
   grid-area: filters-cost;
   margin-top: 27px;
 }
@@ -472,9 +532,9 @@ img {
 /* Sorting */
 .sorting {
   text-align: left;
-  margin-top: 30px;
-  margin-left: 73px;
-  border-bottom: 1px solid var(--basic-grey-border);/*Обратьть внимание на декоративную линию*/
+  margin-top: 30px;/*margin-bottom 30px Надо указать, но нижняя линия не уходит в низ*/
+  padding-left: 73px;
+  border-bottom: 1px solid var(--basic-grey-border);
 }
 
 .sorting-text {
@@ -553,19 +613,24 @@ img {
   padding: 0;
 }
 
-.choosing-hotel {/*gid vs flex вот в чем вопрос*/
-  justify-self: left;
-  display: grid;
+.choosing-hotel {
+  display: flex;
   border-bottom: 1px solid var(--basic-grey-border);
 }
 
-/* .img-hotels {
+.link-hotels {
   display: flex;
+  align-self: flex-start;
+}
+
+.img-hotels {
+  margin: 30px 30px 30px 73px;
 }
 
 .name-hotel-sedona {
+  margin-top: 23px;
   order: 1;
-} */
+}
 
 .name-hotel-sedona:hover {
   color: var(--basic-blue-light);
@@ -579,6 +644,7 @@ img {
 .link-btn-detailed {
   background-color: var(--basic-blue-light);
   color: var(--basic-white);
+  align-self: flex-end;
 }
 
 .link-btn-detailed:hover {
@@ -596,6 +662,7 @@ img {
 .link-btn-book {
   background-color: var(--basic-brown);
   color: var(--basic-white);
+  align-self: flex-end;
 }
 
 .link-btn-book:hover {
@@ -609,10 +676,24 @@ img {
 .price-hotel {
   font-weight: 400;
   color: var(--basic-black-light);
+  align-self: center;
+  margin: 9px;
 }
 
 .rating {
   font-weight: 400;
   background-color: var(--basic-smoky-white);
   color: var(--basic-grey);
+  align-self: flex-end;
+}
+
+.img-stars {/*Доделать*/
+ margin-top: 30px;
+ align-items: flex-start;
+}
+
+/* Blank Text */
+
+.blanc-text {
+  margin: auto;
 }
