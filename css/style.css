@@ -284,18 +284,20 @@ img {
   line-height: 24px;
 }
 
-.btn-search {
+.btn-search-hotel {
   border: none;
   color: var(--basic-white);
   background-color: var(--basic-brown);
   text-transform: inherit;
+  width: 568px;
+  min-height: 86px;
 }
 
-.btn-search:hover {
+.btn-search-hotel:hover {
   background-color: var(--basic-brown-hover);
 }
 
-.btn-search:active {
+.btn-search-hotel:active {
   background-color: var(--basic-brown-active);
 }
 
@@ -304,6 +306,30 @@ img {
 }
 
 /* Window Hotel Search */
+.form-hotel-search {
+  width: 568px;
+  min-height: 395px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--basic-white);
+}
+
+.user-grownup {
+  align-self: flex-start;
+  position: relative;
+  left: 35px;
+}
+
+.user-children {
+  align-self: flex-end;
+  position: relative;
+  top: -70px;
+  right: 25px;
+}
+
 .user {
   border: none;
   background-color: var(--basic-smoky-white);
@@ -318,6 +344,19 @@ img {
   /*как-то надо убрать борт*/
   background-color: var(--basic-white);
   border: 2px solid var(--basic-grey-border);
+}
+
+.arrival-date, .departure-date {
+  width: 346px;
+  min-height: 38px;
+  margin-left: 30px;
+}
+
+.grownup, .children {
+  width: 114px;
+  min-height: 38px;
+  text-align: center;
+  margin-left: 30px;
 }
 
 .logo-calendar:hover {
@@ -336,16 +375,20 @@ img {
   fill: var(--basic-blue-light);
 }
 
-.link-btn-search {
+.btn-search {
   color: var(--basic-white);
   background-color: var(--basic-blue-light);
+  border: none;
+  text-transform: inherit;
+  width: 458px;
+  min-height: 58px;
 }
 
-.link-btn-search:hover {
+.btn-search:hover {
   background-color: var(--basic-blue-hover);
 }
 
-.link-btn-search:active {
+.btn-search:active {
   background-color: var(--basic-blue-active);
 }
 
