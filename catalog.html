@@ -51,15 +51,15 @@
             <legend class="title">Инфраструктура:</legend>
             <ul>
               <li class="list-options">
-                <input type="checkbox" name="infrastructure" id="swimming-pool" value="swimming pool" checked>
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="infrastructure" id="swimming-pool" value="swimming pool" checked>
                 <label class="options" for="swimming-pool">Бассейн</label>
               </li>
               <li class="list-options">
-                <input type="checkbox" name="infrastructure" id="parking" value="parking">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="infrastructure" id="parking" value="parking">
                 <label class="options" for="parking">Парковка</label>
               </li>
               <li class="list-options">
-                <input type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="infrastructure" id="wi-fi" value="wi-fi">
                 <label class="options" for="wi-fi">Wi-Fi</label>
               </li>
             </ul>
@@ -68,16 +68,16 @@
           <fieldset class="filters-hotels">
             <legend class="title">Тип жилья:</legend>
             <ul>
-              <li class="list-options"><!--Кастомные чекбоксы-->
-                <input type="checkbox" name="type of housing" id="hotel" value="hotel" checked>
+              <li class="list-options">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="type of housing" id="hotel" value="hotel" checked>
                 <label class="options" for="hotel">Гостиница</label>
               </li>
               <li class="list-options">
-                <input type="checkbox" name="type of housing" id="motel" value="motel" checked>
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="type of housing" id="motel" value="motel" checked>
                 <label class="options" for="motel">Мотель</label>
               </li>
               <li class="list-options">
-                <input type="checkbox" name="type of housing" id="apartments" value="apartments" checked>
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="type of housing" id="apartments" value="apartments" checked>
                 <label class="options" for="apartments">Апартаменты</label>
               </li>
             </ul>
@@ -85,9 +85,15 @@
 
           <fieldset class="filters-cost">
             <legend class="title-cost">Стоимость в сутки, ₽:</legend>
-            <label for="cost"><input class="cost" type="text" value="от 0" name="min cost" id="cost"></label>
-            <label for="costs"><input class="cost" type="text" value="от 3000" name="max cost" id="costs"></label><br>
-            <input type="range" min="0" max="3000">
+            <label for="cost"><input class="cost" type="text" value="ОТ 0" name="min cost" id="cost"></label>
+            <label for="costs"><input class="cost max-cost" type="text" value="ДО 3000" name="max cost" id="costs"></label>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div><!--style="width: 30%; margin-left: 20%  Теперь ширину прогресс-бара можно менять из скрипта.-->
+              </div>
+              <div class="toggle toggle-min" tabindex="0"></div><!--style=left: 20%-->
+              <div class="toggle toggle-max" tabindex="0"></div><!--style=left: 20%-->
+            </div>
           </fieldset>
 
           <button class="filters-btn" type="submit">Показать</button>
