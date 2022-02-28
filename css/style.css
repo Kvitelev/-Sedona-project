@@ -427,7 +427,9 @@ img {
 }
 
 /* Modal Map */
-
+.modal-map iframe {
+  border: 0;
+}
 
 /* Main Footer */
 .main-footer {
