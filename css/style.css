@@ -47,6 +47,15 @@
 }
 
 /* Global */
+html {
+  box-sizing: content-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 .page {
   width: 1280px;
   height: 100%;
@@ -75,6 +84,7 @@
     "main"
     "footer";
   grid-template-rows: min-content 1fr min-content;
+  position: relative;
 }
 
 a {
@@ -315,6 +325,16 @@ img {
 }
 
 /* Window Hotel Search */
+.window-hotel-search {
+  position: absolute;
+  top: 2148px;
+  left: 317px;
+}
+
+.window-hotel-search--disable {
+  display: none;
+}
+
 .form-hotel-search {
   width: 568px;
   min-height: 395px;
