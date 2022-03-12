@@ -327,8 +327,9 @@ img {
 /* Window Hotel Search */
 .window-hotel-search {
   position: absolute;
-  top: 2148px;
+  top: 2150px;
   left: 317px;
+  animation: bounce 0.6s;
 }
 
 .window-hotel-search--disable {
@@ -888,4 +889,20 @@ img {
 
 .blanc-text {
   margin: auto;
+}
+
+/* Animacions */
+
+@keyframes bounce {
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
